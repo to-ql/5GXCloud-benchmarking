@@ -1,0 +1,14 @@
+@import "reset.css";
+@import "variables.css";
+@import "main.css";
+
+.hide {
+  position: absolute;
+  left: -5000px;
+}
+
+.align_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
