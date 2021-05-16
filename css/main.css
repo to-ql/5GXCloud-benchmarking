@@ -78,7 +78,7 @@
 a.control_prev,
 a.control_next {
   position: absolute;
-  z-index: 999;
+  z-index: 10;
   display: block;
   top: 50%;
   transform: translateY(-50%);
@@ -97,6 +97,7 @@ a.control_next i {
 }
 .slide_container {
   position: relative;
+  animation: slide 13s infinite;
 }
 .slide_container > div {
   position: relative;
