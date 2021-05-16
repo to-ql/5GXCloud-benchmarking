@@ -69,48 +69,41 @@
 }
 
 /*-----슬라이드-----*/
+
 .main_slide {
+  position: relative;
   overflow: hidden;
-  position: relative;
 }
 
-.main_slide-box {
-  position: relative;
-  width: 1440px;
-  animation: slide 13s infinite;
-}
-
-.main_slide .prev,
-.main_slide .next {
-  display: block;
+a.control_prev,
+a.control_next {
   position: absolute;
-  z-index: 1;
+  z-index: 999;
+  display: block;
   top: 50%;
   transform: translateY(-50%);
 }
-.main_slide .prev {
+
+a.control_prev {
   left: 60px;
 }
-.main_slide .next {
+a.control_next {
   right: 60px;
 }
-
-.main_slide .prev i,
-.main_slide .next i {
+a.control_prev i,
+a.control_next i {
   font-size: 30px;
   color: #fff;
 }
-
-.main_slide-list {
-  width: calc(100% * 5);
-  height: 500px;
-}
-
-.main_slide-content {
+.slide_container {
   position: relative;
-  width: 1440px;
-  height: 500px;
+}
+.slide_container > div {
+  position: relative;
+  display: block;
   float: left;
+  width: 100vw;
+  height: 500px;
 }
 
 .slide01 {
@@ -159,7 +152,7 @@
   }
 }
 
-.main_slide-content .text_box {
+.slide_container .text_box {
   position: absolute;
   width: 60%;
   height: 100%;
@@ -168,29 +161,29 @@
   color: #fff;
 }
 
-.main_slide-content .text_box .sub_title {
+.slide_container .text_box .sub_title {
   height: 60px;
 }
 
-.main_slide-content .text_box .sub_title h3 {
+.slide_container .sub_title h3 {
   font-size: 24px;
   font-weight: 300;
 }
-.main_slide-content .text_box .title {
+.slide_container .text_box .title {
   height: 100px;
 }
-.main_slide-content .text_box .title h1 {
+.slide_container .text_box .title h1 {
   font-size: 60px;
   font-weight: 700;
 }
 
-.main_slide-content .text_box .desc {
+.slide_container .text_box .desc {
   height: 80px;
 }
-.main_slide-content .text_box .desc span {
+.slide_container .text_box .desc span {
   line-height: 2;
 }
-.main_slide-content .text_box .slide_btn {
+.slide_container .text_box .slide_btn {
   margin-top: 30px;
   width: 150px;
   height: 40px;
@@ -199,7 +192,7 @@
   font-weight: 700;
   color: #fff;
 }
-.main_slide-content .text_box .slide_btn:hover {
+.slide_container .text_box .slide_btn:hover {
   color: #1e2088;
   border: 1px solid #1e2088;
   transition: all 0.2s linear;
@@ -219,6 +212,7 @@
 .slide04 .text_box .sub_title h3 {
   color: #a0deaf;
 }
+
 /*-----컨텐츠-----*/
 .main_layout {
   width: 1130px;
